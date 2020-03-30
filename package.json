@@ -6,6 +6,7 @@
     "start": "yarn && node server.js"
   },
   "dependencies": {
+    "discord.js": "^12.1.1",
     "express": "^4.17.1"
   },
   "devDependencies": {}
