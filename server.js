@@ -11,11 +11,12 @@ bot.login(DISCORD_TOKEN)
 const userContent = {}
 
 bot.on('ready', () => {
-  console.info(`Logged in as ${bot.user.tag}!`);
+  console.log(`discord login: ${bot.user.tag}!`);
 })
 bot.on('message', msg => {
-  console.log(msg)
-  const { author: { username } } = msg
+  const { author: { username }, content } = msg
+  console.log('discord new msg:', username, content)
+
   if (username === 'Overseer') {
     return
   }
