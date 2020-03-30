@@ -1,0 +1,12 @@
+{
+  "name": "tunnelsnakes.us",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn && node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}

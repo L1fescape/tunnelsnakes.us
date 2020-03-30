@@ -1,0 +1,17 @@
+version: "3"
+services:
+  tunnelsnakes:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      HOST: 0.0.0.0
+    volumes:
+      - ../:/workspace
+      - node_modules:/workspace/node_modules
+    command: sleep infinity
+
+volumes:
+  node_modules:
