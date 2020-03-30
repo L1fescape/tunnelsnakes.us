@@ -1,0 +1,30 @@
+version: "3"
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    ports:
+      - "3000:3000"
+    environment:
+      REDIS_URL: "redis://redis:6379"
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+    command: sleep infinity
+    links:
+      - "redis"
+  redis:
+    restart: always
+    image: redis:latest
+    container_name: redis-container
+    volumes:
+        - redis_store:/data
+    ports:
+        - "6379:6379"
+    command: redis-server --appendonly yes
+
+
+volumes:
+  node_modules:
+  redis_store:

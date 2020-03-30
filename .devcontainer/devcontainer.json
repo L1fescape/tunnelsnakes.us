@@ -1,8 +1,8 @@
 {
   "name": "tunnelsnakes.us",
-  "dockerComposeFile": "./docker-compose.yml",
+  "dockerComposeFile": "../docker-compose.yml",
   "workspaceFolder": "/workspace",
-  "service": "tunnelsnakes",
+  "service": "node",
   "runArgs": [
     "-it"
   ],
@@ -11,8 +11,5 @@
     "esbenp.prettier-vscode",
     "firefox-devtools.vscode-firefox-debug",
     "eamodio.tsl-problem-matcher"
-  ],
-  "settings": {
-    "firefox.args": []
-  }
+  ]
 }
