@@ -55,7 +55,7 @@ app.get("*", function(req, res) {
     }
     const usernames = Object.keys(users || {})
     if (usernames.length) {
-      content += ` users:<br />${usernames.map(user => `<li><a href="/${user}">${user}</a></li>`)}`
+      content += ` users:<br />${usernames.map(user => `<li><a href="/${user}">${user}</a></li>`).join('')}`
     }
     res.send(content)
   })
