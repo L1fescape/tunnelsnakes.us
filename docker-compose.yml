@@ -10,6 +10,7 @@ services:
       REDIS_URL: "redis://redis:6379"
     volumes:
       - .:/workspace
+      - build:/workspace/build
       - node_modules:/workspace/node_modules
     command: sleep infinity
     links:
@@ -26,5 +27,6 @@ services:
 
 
 volumes:
+  build:
   node_modules:
   redis_store:
