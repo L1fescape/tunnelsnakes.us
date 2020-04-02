@@ -6,6 +6,7 @@
         "outDir": "build/script",
         "module": "commonjs",
         "moduleResolution": "node",
+        "jsx": "react",
         "types" : ["node"],
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
